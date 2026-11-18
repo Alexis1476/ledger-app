@@ -25,29 +25,27 @@ const when = computed(() => {
 
 <template>
   <!--
-    Two lines: what and how much, then the actions (on a phone the buttons have their own row,
-    side by side; from sm up they sit at the end of the first line).
+    What, then how much with the actions: the amount sits on the same line as Skip / Record,
+    vertically centred with them (on a phone that line is under the name; from sm up it is all
+    one row).
   -->
   <div class="md-item flex flex-wrap items-center gap-x-3 gap-y-2 py-3">
     <AccountIcon :icon="st.icon" :color="st.color" />
     <div class="min-w-0 flex-1">
-      <div class="flex items-baseline justify-between gap-3">
-        <span class="truncate md-body-large">{{ item.label }}</span>
-        <span
-          v-if="amount"
-          class="tabular md-label-large whitespace-nowrap"
-          :class="amount.qty.isPos() && !amount.qty.isZero() ? 'text-success' : ''"
-        >
-          {{ signedMoney(amount.qty, amount.commodity) }}
-        </span>
-      </div>
+      <div class="truncate md-body-large">{{ item.label }}</div>
       <div class="md-body-medium" :class="item.overdue ? 'text-error' : 'text-muted'">
         {{ when }} · {{ shortDate(item.date) }} · {{ item.every }}
       </div>
     </div>
-    <div class="flex w-full gap-2 pl-12 sm:w-auto sm:pl-0">
+    <div class="flex w-full items-center gap-2 pl-12 sm:w-auto sm:pl-0">
+      <span
+        v-if="amount"
+        class="flex-1 tabular md-title-medium whitespace-nowrap sm:flex-none sm:pr-2"
+        :class="amount.qty.isPos() && !amount.qty.isZero() ? 'text-success' : ''"
+      >
+        {{ signedMoney(amount.qty, amount.commodity) }}
+      </span>
       <UButton
-        class="flex-1 justify-center sm:flex-none"
         variant="soft"
         color="neutral"
         label="Skip"
@@ -56,7 +54,6 @@ const when = computed(() => {
         @click="$emit('skip')"
       />
       <UButton
-        class="flex-1 justify-center sm:flex-none"
         label="Record"
         icon="material-symbols:check-rounded"
         :disabled="busy"
