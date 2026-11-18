@@ -1,0 +1,425 @@
+[
+  [
+    [
+      "assets:andes:checking",
+      "assets:andes:checking",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 1118900000000,
+            "decimalPlaces": 10,
+            "floatingPoint": 111.89
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:bank:checking",
+      "assets:bank:checking",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -39895,
+            "decimalPlaces": 2,
+            "floatingPoint": -398.95
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:bank:prepaid",
+      "assets:bank:prepaid",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -11189,
+            "decimalPlaces": 2,
+            "floatingPoint": -111.89
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:neo:chf",
+      "assets:neo:chf",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 362225,
+            "decimalPlaces": 2,
+            "floatingPoint": 3622.25
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:neo:eur",
+      "assets:neo:eur",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 386071022,
+            "decimalPlaces": 5,
+            "floatingPoint": 3860.71022
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:receivables:eva",
+      "assets:receivables:eva",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 2115,
+            "decimalPlaces": 2,
+            "floatingPoint": 21.15
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:receivables:lucas",
+      "assets:receivables:lucas",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 3000,
+            "decimalPlaces": 2,
+            "floatingPoint": 30
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:sam:neo:chf",
+      "assets:sam:neo:chf",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 87024,
+            "decimalPlaces": 2,
+            "floatingPoint": 870.24
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "liabilities:people:sam",
+      "liabilities:people:sam",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -395575,
+            "decimalPlaces": 2,
+            "floatingPoint": -3955.75
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "liabilities:people:max",
+      "liabilities:people:max",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 20804978,
+            "decimalPlaces": 5,
+            "floatingPoint": 208.04978
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "income:salary",
+      "income:salary",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -432950,
+            "decimalPlaces": 2,
+            "floatingPoint": -4329.5
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "income:gifts",
+      "income:gifts",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -9235,
+            "decimalPlaces": 2,
+            "floatingPoint": -92.35
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "expenses:travel",
+      "expenses:travel",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 493349030201,
+            "decimalPlaces": 10,
+            "floatingPoint": 49.3349030201
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "expenses:fees:bank",
+      "expenses:fees:bank",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 95,
+            "decimalPlaces": 2,
+            "floatingPoint": 0.95
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "expenses:food:groceries",
+      "expenses:food:groceries",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 9750,
+            "decimalPlaces": 2,
+            "floatingPoint": 97.5
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "expenses:food:restaurants",
+      "expenses:food:restaurants",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 2115,
+            "decimalPlaces": 2,
+            "floatingPoint": 21.15
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ]
+  ],
+  [
+    {
+      "acommodity": "CHF",
+      "acost": null,
+      "acostbasis": null,
+      "aquantity": {
+        "decimalMantissa": 47849030201,
+        "decimalPlaces": 10,
+        "floatingPoint": 4.7849030201
+      },
+      "astyle": {
+        "ascommodityside": "R",
+        "ascommodityspaced": true,
+        "asdecimalmark": ".",
+        "asdigitgroups": null,
+        "asprecision": 2,
+        "asrounding": "HardRounding"
+      }
+    }
+  ]
+]
+

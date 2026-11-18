@@ -1,0 +1,63 @@
+{
+  "name": "ledger-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.33.2",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "lint": "eslint . && vue-tsc --noEmit -p tsconfig.app.json",
+    "fixtures": "sh tests/fixtures/regenerate.sh",
+    "gh:smoke": "vitest run tests/unit/github.smoke.test.ts",
+    "fixtures:recipes": "vitest run tests/unit/gen-recipes.test.ts --mode gen-recipes"
+  },
+  "dependencies": {
+    "@fontsource-variable/google-sans-flex": "^5.3.2",
+    "@nuxt/ui": "^4.12.0",
+    "date-fns": "^4.4.0",
+    "decimal.js": "^10.6.0",
+    "echarts": "^6.1.0",
+    "idb-keyval": "^6.3.0",
+    "pinia": "^4.1.0",
+    "tailwindcss": "^4.3.5",
+    "ulid": "^3.0.2",
+    "vue": "^3.5.45",
+    "vue-echarts": "^8.3.2",
+    "vue-router": "^5.4.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^24",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/eslint-config-typescript": "^14.9.0",
+    "eslint": "^10.14.0",
+    "eslint-plugin-vue": "^10.12.0",
+    "fake-indexeddb": "^6.2.7",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.6",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.1.0",
+    "vue-tsc": "^3.3.14",
+    "wrangler": "^4.158.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd",
+      "vue-demi"
+    ],
+    "overrides": {
+      "esbuild@>=0.27.3 <0.28.1": "^0.28.1"
+    }
+  },
+  "license": "MIT"
+}

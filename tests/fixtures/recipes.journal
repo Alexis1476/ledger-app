@@ -1,0 +1,91 @@
+; recipes.journal — one example per transaction shape the app writes (docs/02-data-model.md),
+; plus imported / hand-written shapes the app only reads (H*).
+; Validated with: hledger -f recipes.journal check --strict ordereddates
+; The app formatter must reproduce these exact shapes (all amounts explicit).
+
+include commodities.journal
+include accounts.journal
+
+; R1 expense · a pocket pays a category
+2026-11-02 * Migros | Weekly groceries  ; via:app, id:01JC0000000000000000000001
+    expenses:food:groceries                          84.35 CHF
+    assets:bank:checking                            -84.35 CHF
+
+; H1 imported · groceries paid from Sam's pocket (owners/loan pair merged away)
+2026-11-02 * Aldi
+    expenses:food:groceries                          13.15 CHF
+    assets:sam:neo:chf                              -13.15 CHF
+
+; R2 expense · paid for a person (what I owe Max goes down)
+2026-11-03 * easyJet | Flight Paris - Geneva (for Max)  ; via:app, id:01JC0000000000000000000002
+    liabilities:people:max                           79.48 EUR
+    assets:neo:eur                                  -79.48 EUR
+
+; R3 expense · split between a category and people (Max: I owe him less, Eva: owes me)
+2026-11-04 * Bistro | Dinner for 4  ; via:app, id:01JC0000000000000000000003
+    expenses:food:restaurants                        21.15 CHF
+    liabilities:people:max                           42.30 CHF
+    assets:receivables:eva                           21.15 CHF
+    assets:bank:checking                            -84.60 CHF
+
+; R4 income · from a person (Sam leaves money with me: what I owe her goes up)
+2026-11-05 * Sam | Deposit  ; via:app, id:01JC0000000000000000000004
+    assets:neo:eur                                 4500.00 EUR
+    liabilities:people:sam                        -4500.00 EUR
+
+; R5 transfer · exchange between two pockets, with a fee
+2026-11-06 * Neo | Exchange CHF → EUR  ; via:app, id:01JC0000000000000000000005
+    assets:neo:eur                                  500.00 EUR @@ 468.20 CHF
+    expenses:fees:bank                                0.95 CHF
+    assets:neo:chf                                 -469.15 CHF
+
+; H2 imported · exchange of Sam's money (EUR → CHF), converting what I owe her too
+2026-11-06 * Neo | Exchange EUR → CHF (Sam's money)
+    assets:sam:neo:chf                              683.39 CHF
+    assets:neo:eur                                 -740.00 EUR @@ 683.39 CHF
+    liabilities:people:sam                          740.00 EUR @@ 683.39 CHF
+    liabilities:people:sam                         -683.39 CHF
+
+; R6 transfer · pocket to pocket (into Sam's Neo pocket)
+2026-11-07 * Neo | Into Sam's pocket  ; via:app, id:01JC0000000000000000000006
+    assets:sam:neo:chf                              200.00 CHF
+    assets:neo:chf                                 -200.00 CHF
+
+; R7 transfer · pocket to a person (paying Sam back: the money leaves me, what I owe her goes down)
+2026-11-07 * Sam | Paying back  ; via:app, id:01JC0000000000000000000007
+    liabilities:people:sam                          200.00 CHF
+    assets:bank:checking                           -200.00 CHF
+
+; R8 expense · lend to a third party (Lucas owes me)
+2026-11-08 * Lucas | Loan for the concert  ; via:app, id:01JC0000000000000000000008, due:2026-12-15
+    assets:receivables:lucas                         80.00 CHF
+    assets:bank:checking                            -80.00 CHF
+
+; H3 hand-written · Max gives me part of what I owe him (no physical move)
+2026-11-08 * Max | Keeping 100 EUR as a gift
+    liabilities:people:max                          100.00 EUR
+    income:gifts                                   -100.00 EUR
+
+; R9 income · the third party repays part of it
+2026-11-09 * Lucas | Repays part of the loan  ; via:app, id:01JC0000000000000000000009
+    assets:bank:checking                             50.00 CHF
+    assets:receivables:lucas                        -50.00 CHF
+
+; R10 expense · in a foreign currency, debited in CHF
+2026-11-09 * Restaurant | Dinner in Córdoba  ; via:app, id:01JC0000000000000000000010, holiday:, payment:card
+    expenses:travel                              185000.00 COP @@ 38.10 CHF
+    assets:neo:chf                                  -38.10 CHF
+
+; R11 transfer · between pockets across currencies
+2026-11-10 * Transfer Bank Prepaid → Andes  ; via:app, id:01JC0000000000000000000011
+    assets:andes:checking                        419574.15 COP @@ 111.89 CHF
+    assets:bank:prepaid                            -111.89 CHF
+
+; R12 income · salary
+2026-11-25 * Employer | Salary November  ; via:app, id:01JC0000000000000000000012
+    assets:neo:chf                                 4329.50 CHF
+    income:salary                                 -4329.50 CHF
+
+; R13 monthly balance assertion (copied from the bank statement)
+2026-11-30 * Statement Neo EUR  ; via:app, id:01JC0000000000000000000013
+    assets:neo:eur                                    0.00 EUR = 4180.52 EUR

@@ -1,0 +1,106 @@
+; accounts.journal — chart of accounts
+; Naming: <type>:<institution>:<pocket> for my pockets, assets:<who>:<institution>:<currency>
+; for the money I hold for someone (in the books only, the bills/Neo balance can be shared).
+; One pocket = one currency.
+; Asset accounts say WHERE money is (actif); what someone owes me is assets:receivables:<who>.
+; Money kept for someone stays mine: their pockets assets:<who>:... are an internal label, not a
+; debt. A real debt would be liabilities:people:<who>.
+; Tags read by the app: currency (pocket currency), label, archived; other tags are kept as they are.
+
+; ── Assets: where the money physically is ──────────────────────────────
+account assets                              ; type: A
+account assets:bank:checking                ; type: C, currency: CHF
+account assets:bank:prepaid                 ; type: C, currency: CHF
+account assets:bank:savings                 ; type: C, currency: CHF
+account assets:neo:chf                      ; type: C, currency: CHF
+account assets:neo:eur                      ; type: C, currency: EUR
+account assets:digi:chf                     ; type: C, currency: CHF
+account assets:andes:checking               ; type: C, currency: COP
+account assets:andes:prepaid                ; type: C, currency: COP
+account assets:cash:chf                     ; type: C, currency: CHF
+account assets:cash:eur                     ; type: C, currency: EUR
+account assets:cash:cop                     ; type: C, currency: COP
+; money I keep for someone (my money, labelled for them; a split in the books, not a physical one).
+; Physical cash EUR = assets:cash:eur + assets:*:cash:eur; Neo EUR statement = assets:neo:eur + assets:*:neo:eur.
+account assets:sam:neo:chf                  ; type: C, currency: CHF, from 2026-10-28)
+account assets:sam:neo:eur                  ; type: C, currency: EUR
+account assets:sam:cash:eur                 ; type: C, currency: EUR
+account assets:max:cash:eur                 ; type: C, currency: EUR
+account assets:receivables:eva              ; type: A
+; money that left one register and was not yet found in the other
+account assets:transit:to-reconcile         ; type: A
+
+; ── Liabilities: what I owe (dettes) ─────────────────────────────────
+account liabilities                         ; type: L
+; a real debt to someone: account liabilities:loans:<who>  ; type: L
+
+; ── Equity ─────────────────────────────────────────────────────────────
+account equity                              ; type: E
+account equity:opening                      ; type: E
+; corrections with no counterpart (e.g. imported transfers whose other side was never recorded)
+account equity:adjustments                  ; type: E
+account equity:conversion                   ; type: V
+
+; ── Income ─────────────────────────────────────────────────────────────
+account income                              ; type: R
+account income:salary                       ; type: R
+account income:sales                        ; type: R
+account income:refunds                      ; type: R
+account income:prizes                       ; type: R
+account income:gifts                        ; type: R
+account income:interest                     ; type: R
+; money received from family and friends (payee = the person)
+account income:people                       ; type: R
+account income:family:sam                   ; type: R
+account income:family:max                   ; type: R
+account income:other                        ; type: R
+
+; ── Expenses ───────────────────────────────────────────────────────────
+account expenses                            ; type: X
+account expenses:food:groceries             ; type: X
+account expenses:food:restaurants           ; type: X
+account expenses:food:bars                  ; type: X
+account expenses:transport:public           ; type: X
+account expenses:transport:long-distance    ; type: X
+account expenses:transport:taxi             ; type: X
+account expenses:transport:car              ; type: X
+account expenses:travel                     ; type: X
+account expenses:leisure:going-out          ; type: X
+account expenses:leisure:hobbies            ; type: X
+account expenses:leisure:sport              ; type: X
+account expenses:leisure:gambling           ; type: X
+account expenses:shopping:clothes           ; type: X
+account expenses:shopping:electronics       ; type: X
+account expenses:shopping:other             ; type: X
+account expenses:photo                      ; type: X
+account expenses:home:rent                  ; type: X
+account expenses:home:utilities             ; type: X
+account expenses:home:diy                   ; type: X
+account expenses:gifts                      ; type: X
+account expenses:health:insurance           ; type: X
+account expenses:health:care                ; type: X
+account expenses:personal-care              ; type: X
+account expenses:insurance                  ; type: X
+account expenses:telecom:mobile             ; type: X
+account expenses:telecom:internet           ; type: X
+account expenses:subscriptions:software     ; type: X
+account expenses:subscriptions:streaming    ; type: X
+account expenses:education                  ; type: X
+account expenses:pets                       ; type: X
+account expenses:taxes                      ; type: X
+account expenses:fees:bank                  ; type: X
+account expenses:fees:marketplace           ; type: X
+; money sent to family and friends (payee = the person)
+account expenses:people                     ; type: X
+account expenses:family:sam                 ; type: X
+account expenses:family:max                 ; type: X
+account expenses:investments                ; type: X
+account expenses:misc:discrepancies         ; type: X
+account expenses:misc:other                 ; type: X
+account expenses:uncategorized              ; type: X
+
+; ── Fixture-only accounts ──────────────────────────────────────────────
+; real debts to people (generic support) and a third party
+account liabilities:people:sam              ; type: L
+account liabilities:people:max              ; type: L
+account assets:receivables:lucas            ; type: A

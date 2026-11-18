@@ -1,0 +1,2141 @@
+[
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000001\n",
+    "tdate": "2026-11-02",
+    "tdate2": null,
+    "tdescription": "Migros | Weekly groceries",
+    "tindex": 1,
+    "tpostings": [
+      {
+        "paccount": "expenses:food:groceries",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 8435,
+              "decimalPlaces": 2,
+              "floatingPoint": 84.35
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "X"
+          ]
+        ],
+        "ptransaction_": "1",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:bank:checking",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -8435,
+              "decimalPlaces": 2,
+              "floatingPoint": -84.35
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "1",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 10,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 13,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000001"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "",
+    "tdate": "2026-11-02",
+    "tdate2": null,
+    "tdescription": "Aldi",
+    "tindex": 2,
+    "tpostings": [
+      {
+        "paccount": "expenses:food:groceries",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 1315,
+              "decimalPlaces": 2,
+              "floatingPoint": 13.15
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "X"
+          ]
+        ],
+        "ptransaction_": "2",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:sam:neo:chf",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -1315,
+              "decimalPlaces": 2,
+              "floatingPoint": -13.15
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "2",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 15,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 18,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": []
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000002\n",
+    "tdate": "2026-11-03",
+    "tdate2": null,
+    "tdescription": "easyJet | Flight Paris - Geneva (for Max)",
+    "tindex": 3,
+    "tpostings": [
+      {
+        "paccount": "liabilities:people:max",
+        "pamount": [
+          {
+            "acommodity": "EUR",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 7948,
+              "decimalPlaces": 2,
+              "floatingPoint": 79.48
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "L"
+          ]
+        ],
+        "ptransaction_": "3",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:neo:eur",
+        "pamount": [
+          {
+            "acommodity": "EUR",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -7948,
+              "decimalPlaces": 2,
+              "floatingPoint": -79.48
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "EUR"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "3",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 20,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 23,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000002"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000003\n",
+    "tdate": "2026-11-04",
+    "tdate2": null,
+    "tdescription": "Bistro | Dinner for 4",
+    "tindex": 4,
+    "tpostings": [
+      {
+        "paccount": "expenses:food:restaurants",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 2115,
+              "decimalPlaces": 2,
+              "floatingPoint": 21.15
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "X"
+          ]
+        ],
+        "ptransaction_": "4",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "liabilities:people:max",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 4230,
+              "decimalPlaces": 2,
+              "floatingPoint": 42.3
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "L"
+          ]
+        ],
+        "ptransaction_": "4",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:receivables:eva",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 2115,
+              "decimalPlaces": 2,
+              "floatingPoint": 21.15
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "4",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:bank:checking",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -8460,
+              "decimalPlaces": 2,
+              "floatingPoint": -84.6
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "4",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 25,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 30,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000003"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000004\n",
+    "tdate": "2026-11-05",
+    "tdate2": null,
+    "tdescription": "Sam | Deposit",
+    "tindex": 5,
+    "tpostings": [
+      {
+        "paccount": "assets:neo:eur",
+        "pamount": [
+          {
+            "acommodity": "EUR",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 450000,
+              "decimalPlaces": 2,
+              "floatingPoint": 4500
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "EUR"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "5",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "liabilities:people:sam",
+        "pamount": [
+          {
+            "acommodity": "EUR",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -450000,
+              "decimalPlaces": 2,
+              "floatingPoint": -4500
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "L"
+          ]
+        ],
+        "ptransaction_": "5",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 32,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 35,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000004"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000005\n",
+    "tdate": "2026-11-06",
+    "tdate2": null,
+    "tdescription": "Neo | Exchange CHF → EUR",
+    "tindex": 6,
+    "tpostings": [
+      {
+        "paccount": "assets:neo:eur",
+        "pamount": [
+          {
+            "acommodity": "EUR",
+            "acost": {
+              "contents": {
+                "acommodity": "CHF",
+                "acost": null,
+                "acostbasis": null,
+                "aquantity": {
+                  "decimalMantissa": 4682,
+                  "decimalPlaces": 1,
+                  "floatingPoint": 468.2
+                },
+                "astyle": {
+                  "ascommodityside": "R",
+                  "ascommodityspaced": true,
+                  "asdecimalmark": ".",
+                  "asdigitgroups": null,
+                  "asprecision": 2,
+                  "asrounding": "NoRounding"
+                }
+              },
+              "tag": "TotalCost"
+            },
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 50000,
+              "decimalPlaces": 2,
+              "floatingPoint": 500
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "EUR"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "6",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "expenses:fees:bank",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 95,
+              "decimalPlaces": 2,
+              "floatingPoint": 0.95
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "X"
+          ]
+        ],
+        "ptransaction_": "6",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:neo:chf",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -46915,
+              "decimalPlaces": 2,
+              "floatingPoint": -469.15
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "6",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 37,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 41,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000005"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "",
+    "tdate": "2026-11-06",
+    "tdate2": null,
+    "tdescription": "Neo | Exchange EUR → CHF (Sam's money)",
+    "tindex": 7,
+    "tpostings": [
+      {
+        "paccount": "assets:sam:neo:chf",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 68339,
+              "decimalPlaces": 2,
+              "floatingPoint": 683.39
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "7",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:neo:eur",
+        "pamount": [
+          {
+            "acommodity": "EUR",
+            "acost": {
+              "contents": {
+                "acommodity": "CHF",
+                "acost": null,
+                "acostbasis": null,
+                "aquantity": {
+                  "decimalMantissa": -68339,
+                  "decimalPlaces": 2,
+                  "floatingPoint": -683.39
+                },
+                "astyle": {
+                  "ascommodityside": "R",
+                  "ascommodityspaced": true,
+                  "asdecimalmark": ".",
+                  "asdigitgroups": null,
+                  "asprecision": 2,
+                  "asrounding": "NoRounding"
+                }
+              },
+              "tag": "TotalCost"
+            },
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -74000,
+              "decimalPlaces": 2,
+              "floatingPoint": -740
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "EUR"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "7",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "liabilities:people:sam",
+        "pamount": [
+          {
+            "acommodity": "EUR",
+            "acost": {
+              "contents": {
+                "acommodity": "CHF",
+                "acost": null,
+                "acostbasis": null,
+                "aquantity": {
+                  "decimalMantissa": 68339,
+                  "decimalPlaces": 2,
+                  "floatingPoint": 683.39
+                },
+                "astyle": {
+                  "ascommodityside": "R",
+                  "ascommodityspaced": true,
+                  "asdecimalmark": ".",
+                  "asdigitgroups": null,
+                  "asprecision": 2,
+                  "asrounding": "NoRounding"
+                }
+              },
+              "tag": "TotalCost"
+            },
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 74000,
+              "decimalPlaces": 2,
+              "floatingPoint": 740
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "L"
+          ]
+        ],
+        "ptransaction_": "7",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "liabilities:people:sam",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -68339,
+              "decimalPlaces": 2,
+              "floatingPoint": -683.39
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "L"
+          ]
+        ],
+        "ptransaction_": "7",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 43,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 48,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": []
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000006\n",
+    "tdate": "2026-11-07",
+    "tdate2": null,
+    "tdescription": "Neo | Into Sam's pocket",
+    "tindex": 8,
+    "tpostings": [
+      {
+        "paccount": "assets:sam:neo:chf",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 20000,
+              "decimalPlaces": 2,
+              "floatingPoint": 200
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "8",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:neo:chf",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -20000,
+              "decimalPlaces": 2,
+              "floatingPoint": -200
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "8",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 50,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 53,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000006"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000007\n",
+    "tdate": "2026-11-07",
+    "tdate2": null,
+    "tdescription": "Sam | Paying back",
+    "tindex": 9,
+    "tpostings": [
+      {
+        "paccount": "liabilities:people:sam",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 20000,
+              "decimalPlaces": 2,
+              "floatingPoint": 200
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "L"
+          ]
+        ],
+        "ptransaction_": "9",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:bank:checking",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -20000,
+              "decimalPlaces": 2,
+              "floatingPoint": -200
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "9",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 55,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 58,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000007"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000008, due:2026-12-15\n",
+    "tdate": "2026-11-08",
+    "tdate2": null,
+    "tdescription": "Lucas | Loan for the concert",
+    "tindex": 10,
+    "tpostings": [
+      {
+        "paccount": "assets:receivables:lucas",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 8000,
+              "decimalPlaces": 2,
+              "floatingPoint": 80
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "10",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:bank:checking",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -8000,
+              "decimalPlaces": 2,
+              "floatingPoint": -80
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "10",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 60,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 63,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000008"
+      ],
+      [
+        "due",
+        "2026-12-15"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "",
+    "tdate": "2026-11-08",
+    "tdate2": null,
+    "tdescription": "Max | Keeping 100 EUR as a gift",
+    "tindex": 11,
+    "tpostings": [
+      {
+        "paccount": "liabilities:people:max",
+        "pamount": [
+          {
+            "acommodity": "EUR",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 10000,
+              "decimalPlaces": 2,
+              "floatingPoint": 100
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "L"
+          ]
+        ],
+        "ptransaction_": "11",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "income:gifts",
+        "pamount": [
+          {
+            "acommodity": "EUR",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -10000,
+              "decimalPlaces": 2,
+              "floatingPoint": -100
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "R"
+          ]
+        ],
+        "ptransaction_": "11",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 65,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 68,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": []
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000009\n",
+    "tdate": "2026-11-09",
+    "tdate2": null,
+    "tdescription": "Lucas | Repays part of the loan",
+    "tindex": 12,
+    "tpostings": [
+      {
+        "paccount": "assets:bank:checking",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 5000,
+              "decimalPlaces": 2,
+              "floatingPoint": 50
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "12",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:receivables:lucas",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -5000,
+              "decimalPlaces": 2,
+              "floatingPoint": -50
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "12",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 70,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 73,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000009"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000010, holiday:, payment:card\n",
+    "tdate": "2026-11-09",
+    "tdate2": null,
+    "tdescription": "Restaurant | Dinner in Córdoba",
+    "tindex": 13,
+    "tpostings": [
+      {
+        "paccount": "expenses:travel",
+        "pamount": [
+          {
+            "acommodity": "COP",
+            "acost": {
+              "contents": {
+                "acommodity": "CHF",
+                "acost": null,
+                "acostbasis": null,
+                "aquantity": {
+                  "decimalMantissa": 381,
+                  "decimalPlaces": 1,
+                  "floatingPoint": 38.1
+                },
+                "astyle": {
+                  "ascommodityside": "R",
+                  "ascommodityspaced": true,
+                  "asdecimalmark": ".",
+                  "asdigitgroups": null,
+                  "asprecision": 2,
+                  "asrounding": "NoRounding"
+                }
+              },
+              "tag": "TotalCost"
+            },
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 18500000,
+              "decimalPlaces": 2,
+              "floatingPoint": 185000
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "X"
+          ]
+        ],
+        "ptransaction_": "13",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:neo:chf",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -3810,
+              "decimalPlaces": 2,
+              "floatingPoint": -38.1
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "13",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 75,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 78,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000010"
+      ],
+      [
+        "holiday",
+        ""
+      ],
+      [
+        "payment",
+        "card"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000011\n",
+    "tdate": "2026-11-10",
+    "tdate2": null,
+    "tdescription": "Transfer Bank Prepaid → Andes",
+    "tindex": 14,
+    "tpostings": [
+      {
+        "paccount": "assets:andes:checking",
+        "pamount": [
+          {
+            "acommodity": "COP",
+            "acost": {
+              "contents": {
+                "acommodity": "CHF",
+                "acost": null,
+                "acostbasis": null,
+                "aquantity": {
+                  "decimalMantissa": 11189,
+                  "decimalPlaces": 2,
+                  "floatingPoint": 111.89
+                },
+                "astyle": {
+                  "ascommodityside": "R",
+                  "ascommodityspaced": true,
+                  "asdecimalmark": ".",
+                  "asdigitgroups": null,
+                  "asprecision": 2,
+                  "asrounding": "NoRounding"
+                }
+              },
+              "tag": "TotalCost"
+            },
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 41957415,
+              "decimalPlaces": 2,
+              "floatingPoint": 419574.15
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "COP"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "14",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "assets:bank:prepaid",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -11189,
+              "decimalPlaces": 2,
+              "floatingPoint": -111.89
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "14",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 80,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 83,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000011"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000012\n",
+    "tdate": "2026-11-25",
+    "tdate2": null,
+    "tdescription": "Employer | Salary November",
+    "tindex": 15,
+    "tpostings": [
+      {
+        "paccount": "assets:neo:chf",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 432950,
+              "decimalPlaces": 2,
+              "floatingPoint": 4329.5
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "CHF"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "15",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "income:salary",
+        "pamount": [
+          {
+            "acommodity": "CHF",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -432950,
+              "decimalPlaces": 2,
+              "floatingPoint": -4329.5
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "R"
+          ]
+        ],
+        "ptransaction_": "15",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 85,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 88,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000012"
+      ]
+    ]
+  },
+  {
+    "tcode": "",
+    "tcomment": "via:app, id:01JC0000000000000000000013\n",
+    "tdate": "2026-11-30",
+    "tdate2": null,
+    "tdescription": "Statement Neo EUR",
+    "tindex": 16,
+    "tpostings": [
+      {
+        "paccount": "assets:neo:eur",
+        "pamount": [
+          {
+            "acommodity": "EUR",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 0,
+              "decimalPlaces": 2,
+              "floatingPoint": 0
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": {
+          "baamount": {
+            "acommodity": "EUR",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 418052,
+              "decimalPlaces": 2,
+              "floatingPoint": 4180.52
+            },
+            "astyle": {
+              "ascommodityside": "R",
+              "ascommodityspaced": true,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          },
+          "bainclusive": false,
+          "baposition": {
+            "sourceColumn": 64,
+            "sourceLine": 91,
+            "sourceName": "recipes.journal"
+          },
+          "batotal": false
+        },
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [
+          [
+            "type",
+            "C"
+          ],
+          [
+            "currency",
+            "EUR"
+          ],
+          [
+            "type",
+            "A"
+          ]
+        ],
+        "ptransaction_": "16",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 90,
+        "sourceName": "recipes.journal"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 92,
+        "sourceName": "recipes.journal"
+      }
+    ],
+    "tstatus": "Cleared",
+    "ttags": [
+      [
+        "via",
+        "app"
+      ],
+      [
+        "id",
+        "01JC0000000000000000000013"
+      ]
+    ]
+  }
+]

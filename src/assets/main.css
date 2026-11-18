@@ -1,0 +1,460 @@
+@import "@fontsource-variable/google-sans-flex";
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* Google Sans Flex (the Material 3 Expressive typeface), bundled: works offline in the PWA */
+@theme {
+  --font-sans: "Google Sans Flex Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+/*
+ * Material 3 Expressive, as design tokens (--md-sys-*).
+ * Color: the "vibrant" scheme generated from the seed #2f7cf6 with
+ *   @material/material-color-utilities (never hand-picked: regenerate to change the seed).
+ *   The page is the surface container, cards the brightest surface (tonal depth, no outline,
+ *   no shadow); the headline card and the main action use the primary roles.
+ * Shape: the corner scale. Buttons and search are full, text fields small, cards
+ *   large-increased, the headline card and sheets extra-large, the FAB large.
+ * Type: the type scale (display → label) as md-* utilities, on Google Sans Flex.
+ * Motion: springs for components (indicator, thumb, FAB, press); the emphasized easing and
+ *   durations for what enters the screen.
+ * Chart series (categorical, validated with the dataviz checker for both surfaces):
+ * slot 1 blue, slot 2 orange, slot 3 aqua, slot 4 yellow (the last two are under 3:1 on the light
+ * surface: charts using them always carry a legend with the values). Success (green) is the one extended color, reserved for state.
+ */
+:root {
+  --md-sys-color-primary: #005ac4;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #d8e2ff;
+  --md-sys-color-on-primary-container: #004396;
+  --md-sys-color-secondary: #595c7e;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #e0e0ff;
+  --md-sys-color-on-secondary-container: #414465;
+  --md-sys-color-tertiary: #625789;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #e7deff;
+  --md-sys-color-on-tertiary-container: #4a3f6f;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #93000a;
+  --md-sys-color-surface: #faf9ff;
+  --md-sys-color-on-surface: #181b25;
+  --md-sys-color-on-surface-variant: #424754;
+  --md-sys-color-surface-dim: #d7d9e6;
+  --md-sys-color-surface-bright: #faf9ff;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f1f3ff;
+  --md-sys-color-surface-container: #ebedfb;
+  --md-sys-color-surface-container-high: #e5e8f5;
+  --md-sys-color-surface-container-highest: #dfe2ef;
+  --md-sys-color-inverse-surface: #2d303a;
+  --md-sys-color-inverse-on-surface: #eef0fd;
+  --md-sys-color-inverse-primary: #aec6ff;
+  --md-sys-color-outline: #727785;
+  --md-sys-color-outline-variant: #c2c6d6;
+  --md-sys-color-scrim: #000000;
+
+  --md-sys-shape-corner-extra-small: 0.25rem;
+  --md-sys-shape-corner-small: 0.5rem;
+  --md-sys-shape-corner-medium: 0.75rem;
+  --md-sys-shape-corner-large: 1rem;
+  --md-sys-shape-corner-large-increased: 1.25rem;
+  --md-sys-shape-corner-extra-large: 1.75rem;
+  --md-sys-shape-corner-full: 9999px;
+
+  --md-sys-motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --md-sys-motion-easing-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --md-sys-motion-duration-enter: 400ms;
+  /* springs: ExpressiveMotionTokens (damping ratio / stiffness), sampled into linear() with their settle time */
+  --md-sys-motion-spring-fast-spatial: linear(0, 0.02, 0.074, 0.152, 0.246, 0.348, 0.453, 0.555, 0.653, 0.742, 0.821, 0.889, 0.947, 0.994, 1.03, 1.057, 1.076, 1.088, 1.094, 1.095, 1.091, 1.085, 1.078, 1.068, 1.059, 1.049, 1.039, 1.03, 1.022, 1.015, 1.009, 1.003, 0.999, 0.996, 0.994, 0.992, 0.991, 0.991, 0.991, 0.991, 0.992, 0.993, 0.994, 0.995, 0.996, 0.997, 0.997, 0.998, 0.999); /* 0.6 / 800 */
+  --md-sys-motion-spring-fast-spatial-duration: 357ms;
+  --md-sys-motion-spring-default-spatial: linear(0, 0.013, 0.049, 0.1, 0.162, 0.23, 0.302, 0.374, 0.445, 0.513, 0.578, 0.637, 0.692, 0.741, 0.786, 0.825, 0.859, 0.888, 0.914, 0.935, 0.953, 0.968, 0.98, 0.99, 0.998, 1.004, 1.008, 1.011, 1.013, 1.014, 1.015, 1.015, 1.015, 1.014, 1.013, 1.012, 1.011, 1.01, 1.009, 1.008, 1.007, 1.006, 1.005, 1.004, 1.004, 1.003, 1.002, 1.002, 1.002); /* 0.8 / 380 */
+  --md-sys-motion-spring-default-spatial-duration: 421ms;
+  --md-sys-motion-spring-slow-spatial: linear(0, 0.013, 0.048, 0.099, 0.16, 0.228, 0.299, 0.371, 0.442, 0.51, 0.574, 0.634, 0.688, 0.738, 0.782, 0.821, 0.856, 0.886, 0.911, 0.933, 0.951, 0.967, 0.979, 0.989, 0.997, 1.003, 1.007, 1.011, 1.013, 1.014, 1.015, 1.015, 1.015, 1.014, 1.013, 1.013, 1.011, 1.01, 1.009, 1.008, 1.007, 1.006, 1.005, 1.005, 1.004, 1.003, 1.003, 1.002, 1.002); /* 0.8 / 200 */
+  --md-sys-motion-spring-slow-spatial-duration: 577ms;
+  --md-sys-motion-spring-fast-effects: linear(0, 0.016, 0.056, 0.111, 0.175, 0.244, 0.313, 0.381, 0.446, 0.506, 0.563, 0.614, 0.661, 0.703, 0.741, 0.774, 0.804, 0.83, 0.853, 0.873, 0.891, 0.906, 0.919, 0.931, 0.94, 0.949, 0.956, 0.963, 0.968, 0.973, 0.977, 0.98, 0.983, 0.986, 0.988, 0.99, 0.991, 0.993, 0.994, 0.995, 0.996, 0.996, 0.997, 0.997, 0.998, 0.998, 0.998, 0.999, 0.999); /* 1 / 3800 */
+  --md-sys-motion-spring-fast-effects-duration: 147ms;
+  --md-sys-motion-spring-default-effects: linear(0, 0.015, 0.053, 0.107, 0.169, 0.235, 0.303, 0.369, 0.433, 0.493, 0.549, 0.601, 0.648, 0.69, 0.728, 0.762, 0.793, 0.82, 0.843, 0.864, 0.882, 0.898, 0.912, 0.924, 0.935, 0.944, 0.952, 0.959, 0.965, 0.97, 0.974, 0.978, 0.981, 0.984, 0.986, 0.988, 0.99, 0.991, 0.993, 0.994, 0.995, 0.996, 0.996, 0.997, 0.997, 0.998, 0.998, 0.998, 0.999); /* 1 / 1600 */
+  --md-sys-motion-spring-default-effects-duration: 221ms;
+  --md-sys-motion-spring-slow-effects: linear(0, 0.015, 0.052, 0.105, 0.166, 0.231, 0.298, 0.364, 0.428, 0.487, 0.543, 0.595, 0.642, 0.684, 0.723, 0.757, 0.788, 0.815, 0.839, 0.86, 0.878, 0.895, 0.909, 0.921, 0.932, 0.941, 0.95, 0.957, 0.963, 0.968, 0.973, 0.976, 0.98, 0.983, 0.985, 0.987, 0.989, 0.991, 0.992, 0.993, 0.994, 0.995, 0.996, 0.996, 0.997, 0.997, 0.998, 0.998, 0.998); /* 1 / 800 */
+  --md-sys-motion-spring-slow-effects-duration: 309ms;
+  --md-sys-shape-corner-extra-large-increased: 2rem;
+  --md-sys-shape-corner-extra-extra-large: 3rem;
+  --ui-radius: 0.5rem;
+  /* one control height for forms = Nuxt UI size xl (text fields, selects, buttons): 56dp */
+  --field-h: 3.5rem;
+  --app-page: var(--md-sys-color-surface-container);
+  --app-card: var(--md-sys-color-surface-bright);
+  --app-chart-surface: var(--md-sys-color-surface-bright);
+  /* Nuxt UI reads the Material roles */
+  --ui-primary: var(--md-sys-color-primary);
+  --ui-error: var(--md-sys-color-error);
+  --ui-bg: var(--app-page);
+  --ui-bg-muted: var(--md-sys-color-surface-container-low);
+  --ui-bg-elevated: var(--md-sys-color-surface-container-high);
+  --ui-bg-accented: var(--md-sys-color-surface-container-highest);
+  --ui-bg-inverted: var(--md-sys-color-inverse-surface);
+  --ui-text: var(--md-sys-color-on-surface);
+  --ui-text-highlighted: var(--md-sys-color-on-surface);
+  --ui-text-toned: var(--md-sys-color-on-surface-variant);
+  --ui-text-muted: var(--md-sys-color-on-surface-variant);
+  --ui-text-dimmed: var(--md-sys-color-outline);
+  --ui-text-inverted: var(--md-sys-color-inverse-on-surface);
+  --ui-border: var(--md-sys-color-outline-variant);
+  --ui-border-muted: var(--md-sys-color-outline-variant);
+  --ui-border-accented: var(--md-sys-color-outline);
+  --app-series-1: #2a78d6;
+  --app-series-2: #eb6834;
+  --app-series-3: #1baf7a;
+  --app-series-4: #eda100;
+  --nav-insights: #e11d48;
+  --app-grid: rgb(15 23 42 / 0.08);
+  /* menu entries (src/lib/nav.ts) */
+  --nav-home: #2563eb;
+  --nav-transactions: #475569;
+  --nav-shopping: #16a34a;
+  --nav-scheduled: #7c3aed;
+  --nav-people: #db2777;
+  --nav-loans: #d97706;
+  --nav-accounts: #0284c7;
+  --nav-inventory: #0d9488;
+  --nav-accounting: #4f46e5;
+  --nav-chart: #ea580c;
+  --nav-settings: #6b7280;
+}
+
+.dark {
+  --md-sys-color-primary: #aec6ff;
+  --md-sys-color-on-primary: #002e6b;
+  --md-sys-color-primary-container: #004396;
+  --md-sys-color-on-primary-container: #d8e2ff;
+  --md-sys-color-secondary: #c2c4eb;
+  --md-sys-color-on-secondary: #2b2e4d;
+  --md-sys-color-secondary-container: #414465;
+  --md-sys-color-on-secondary-container: #e0e0ff;
+  --md-sys-color-tertiary: #ccbff7;
+  --md-sys-color-on-tertiary: #342957;
+  --md-sys-color-tertiary-container: #4a3f6f;
+  --md-sys-color-on-tertiary-container: #e7deff;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+  --md-sys-color-surface: #0f131c;
+  --md-sys-color-on-surface: #dfe2ef;
+  --md-sys-color-on-surface-variant: #c2c6d6;
+  --md-sys-color-surface-dim: #0f131c;
+  --md-sys-color-surface-bright: #353943;
+  --md-sys-color-surface-container-lowest: #0a0e17;
+  --md-sys-color-surface-container-low: #181b25;
+  --md-sys-color-surface-container: #1c1f29;
+  --md-sys-color-surface-container-high: #262a33;
+  --md-sys-color-surface-container-highest: #31353f;
+  --md-sys-color-inverse-surface: #dfe2ef;
+  --md-sys-color-inverse-on-surface: #2d303a;
+  --md-sys-color-inverse-primary: #005ac4;
+  --md-sys-color-outline: #8c909f;
+  --md-sys-color-outline-variant: #424754;
+  --app-page: var(--md-sys-color-surface-container-low);
+  /* cards one step under the fields (surface-container-highest), like dialogs: a field stays visible in a card */
+  --app-card: var(--md-sys-color-surface-container-high);
+  --app-chart-surface: var(--md-sys-color-surface-container-high);
+  --app-series-1: #3987e5;
+  --app-series-2: #d95926;
+  --app-series-3: #199e70;
+  --app-series-4: #c98500;
+  --nav-insights: #fb7185;
+  --app-grid: rgb(255 255 255 / 0.08);
+  --nav-home: #60a5fa;
+  --nav-transactions: #94a3b8;
+  --nav-shopping: #4ade80;
+  --nav-scheduled: #a78bfa;
+  --nav-people: #f472b6;
+  --nav-loans: #fbbf24;
+  --nav-accounts: #38bdf8;
+  --nav-inventory: #2dd4bf;
+  --nav-accounting: #818cf8;
+  --nav-chart: #fb923c;
+  --nav-settings: #9ca3af;
+}
+
+html,
+body {
+  overscroll-behavior-y: none;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* touch target: at least 48×48dp on a touch screen (Material), compact with a mouse */
+@utility tap {
+  @media (pointer: coarse) {
+    min-height: 3rem;
+    min-width: 3rem;
+    justify-content: center;
+  }
+}
+
+/* type scale (the roles used in the app) */
+@utility md-display-small {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  letter-spacing: 0;
+}
+@utility md-headline-small {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@utility md-title-large {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+}
+@utility md-title-medium {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.009em;
+}
+@utility md-headline-medium {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+@utility md-title-small {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.007em;
+}
+@utility md-body-large {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.03em;
+}
+@utility md-body-medium {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.018em;
+}
+@utility md-body-small {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.03em;
+}
+@utility md-label-large {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.007em;
+}
+@utility md-label-medium {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/*
+ * privacy mode (usePrivacy): amounts and charts are blurred, and cannot be selected or copied.
+ * Not in a form: what is being typed stays readable.
+ */
+.privacy .tabular:not(input, form *),
+.privacy .echarts {
+  filter: blur(7px);
+  user-select: none;
+  transition: filter var(--md-sys-motion-spring-default-effects-duration) var(--md-sys-motion-spring-default-effects);
+}
+.tabular,
+.echarts {
+  transition: filter var(--md-sys-motion-spring-default-effects-duration) var(--md-sys-motion-spring-default-effects);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* pressed: the state layer (on-surface 10%) */
+.press {
+  transition: background-color var(--md-sys-motion-spring-fast-effects-duration) var(--md-sys-motion-spring-fast-effects);
+  -webkit-tap-highlight-color: transparent;
+}
+.press:active {
+  background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 10%, transparent);
+}
+
+/*
+ * Segmented list (Expressive): each item is its own surface-bright container, 2dp apart;
+ * the ends of the list take the large corner, the items in between the extra-small one.
+ * An item rounds off under the finger (shape morph, fast spatial spring).
+ */
+.md-list {
+  padding: 0;
+}
+*:has(> .md-list) {
+  background-color: transparent;
+  border-radius: 0;
+  overflow: visible;
+}
+*:has(> .md-list) > * {
+  border-width: 0;
+}
+*:has(> .md-list) > :not(.md-list) {
+  padding-inline: 0.25rem;
+  padding-top: 0;
+}
+.md-item {
+  background-color: var(--app-card);
+  border-radius: var(--md-sys-shape-corner-extra-small);
+  margin-bottom: 2px;
+  padding-inline: 1rem;
+  min-height: 3.5rem;
+  transition:
+    border-radius var(--md-sys-motion-spring-fast-spatial-duration) var(--md-sys-motion-spring-fast-spatial),
+    background-color var(--md-sys-motion-spring-fast-effects-duration) var(--md-sys-motion-spring-fast-effects);
+}
+.md-item:nth-child(1 of .md-item) {
+  border-top-left-radius: var(--md-sys-shape-corner-large);
+  border-top-right-radius: var(--md-sys-shape-corner-large);
+}
+.md-item:nth-last-child(1 of .md-item) {
+  border-bottom-left-radius: var(--md-sys-shape-corner-large);
+  border-bottom-right-radius: var(--md-sys-shape-corner-large);
+}
+.md-item.press:active {
+  border-radius: var(--md-sys-shape-corner-large);
+  background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 10%, var(--app-card));
+}
+
+/* a page arrives: its blocks rise into place one after the other */
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 16px;
+    scale: 0.98;
+  }
+}
+.stagger > * {
+  animation: rise var(--md-sys-motion-duration-enter) var(--md-sys-motion-easing-emphasized-decelerate) backwards;
+}
+.stagger > *:nth-child(2) { animation-delay: 45ms; }
+.stagger > *:nth-child(3) { animation-delay: 90ms; }
+.stagger > *:nth-child(4) { animation-delay: 135ms; }
+.stagger > *:nth-child(5) { animation-delay: 180ms; }
+.stagger > *:nth-child(6) { animation-delay: 225ms; }
+.stagger > *:nth-child(n + 7) { animation-delay: 270ms; }
+
+/* the headline card: primary container */
+.hero {
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  border-radius: var(--md-sys-shape-corner-extra-large);
+}
+
+/* navigation bar: the active destination's pill grows from its center */
+@keyframes pill-in {
+  from {
+    scale: 0.35 1;
+    opacity: 0;
+  }
+}
+.nav-pill {
+  width: 3.5rem;
+  height: 2rem;
+  color: var(--md-sys-color-on-surface-variant);
+  transition: background-color var(--md-sys-motion-spring-default-effects-duration) var(--md-sys-motion-spring-default-effects);
+}
+.nav-pill[data-active="true"] {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  animation: pill-in var(--md-sys-motion-spring-fast-spatial-duration) var(--md-sys-motion-spring-fast-spatial);
+}
+@keyframes pop {
+  from {
+    scale: 0.7;
+  }
+}
+.nav-pill[data-active="true"] > * {
+  animation: pop var(--md-sys-motion-spring-fast-spatial-duration) var(--md-sys-motion-spring-fast-spatial);
+}
+
+/* FAB: 56dp, corner large, primary container, elevation level 3; rounds off when pressed */
+.fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--md-sys-shape-corner-large);
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.3), 0 4px 8px 3px rgb(0 0 0 / 0.15);
+  flex-shrink: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    border-radius var(--md-sys-motion-spring-fast-spatial-duration) var(--md-sys-motion-spring-fast-spatial),
+    scale var(--md-sys-motion-spring-fast-spatial-duration) var(--md-sys-motion-spring-fast-spatial);
+}
+.fab:active {
+  border-radius: var(--md-sys-shape-corner-extra-large);
+  scale: 0.94;
+}
+.fab-extended {
+  width: 100%;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  padding-inline: 1rem;
+  font-weight: 500;
+}
+
+/* switch (52×32dp track, the handle grows from 16 to 24dp when on, 28dp when pressed) */
+[data-slot="base"][role="switch"] {
+  width: 3.25rem;
+  height: 2rem;
+  border: 2px solid var(--md-sys-color-outline);
+  background-color: var(--md-sys-color-surface-container-highest);
+  align-items: center;
+}
+[data-slot="base"][role="switch"][data-state="checked"] {
+  border-color: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-primary);
+}
+[data-slot="base"][role="switch"] > [data-slot="thumb"] {
+  width: 1rem;
+  height: 1rem;
+  margin-inline: 0.375rem;
+  box-shadow: none;
+  background-color: var(--md-sys-color-outline);
+  translate: 0;
+  transform: none;
+  transition:
+    width var(--md-sys-motion-spring-fast-spatial-duration) var(--md-sys-motion-spring-fast-spatial),
+    height var(--md-sys-motion-spring-fast-spatial-duration) var(--md-sys-motion-spring-fast-spatial),
+    margin var(--md-sys-motion-spring-fast-spatial-duration) var(--md-sys-motion-spring-fast-spatial),
+    translate var(--md-sys-motion-spring-fast-spatial-duration) var(--md-sys-motion-spring-fast-spatial);
+}
+[data-slot="base"][role="switch"][data-state="checked"] > [data-slot="thumb"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-inline: 0.125rem;
+  background-color: var(--md-sys-color-on-primary);
+  translate: 1.25rem 0;
+}
+[data-slot="base"][role="switch"]:active > [data-slot="thumb"] {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-inline: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

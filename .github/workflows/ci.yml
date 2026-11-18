@@ -1,0 +1,49 @@
+# Lint, unit + golden tests, build. Also proves the golden fixtures are up to date with hledger.
+name: ci
+on:
+  push:
+  pull_request:
+
+env:
+  HLEDGER_VERSION: "1.52.1"
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Cache hledger
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/bin/hledger
+          key: hledger-${{ env.HLEDGER_VERSION }}
+
+      - name: Install hledger
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/.local/bin
+          curl -fsSL "https://github.com/simonmichael/hledger/releases/download/${HLEDGER_VERSION}/hledger-linux-x64.tar.gz" \
+            | tar -xz -C ~/.local/bin hledger
+
+      - run: echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Fixtures are up to date
+        run: |
+          sh tests/fixtures/regenerate.sh
+          git diff --exit-code -- tests/fixtures
+
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm build

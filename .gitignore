@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.wrangler/
+coverage/
+test-results/
+playwright-report/
+*.local
+.env*
+!.env.example
+tests/e2e/.data/
+
+# local tooling (AI assistant skills), not part of the app
+.agents/
+.claude/
+skills-lock.json

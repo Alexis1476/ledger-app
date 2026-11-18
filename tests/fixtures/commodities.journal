@@ -1,0 +1,5 @@
+; commodities.journal — currencies and display format
+commodity 1000.00 CHF
+commodity 1000.00 EUR
+commodity 1000.00 USD
+commodity 1000.00 COP

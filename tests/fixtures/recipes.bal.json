@@ -1,0 +1,671 @@
+[
+  [
+    [
+      "assets:andes:checking",
+      "assets:andes:checking",
+      0,
+      [
+        {
+          "acommodity": "COP",
+          "acost": {
+            "contents": {
+              "acommodity": "CHF",
+              "acost": null,
+              "acostbasis": null,
+              "aquantity": {
+                "decimalMantissa": 11189,
+                "decimalPlaces": 2,
+                "floatingPoint": 111.89
+              },
+              "astyle": {
+                "ascommodityside": "R",
+                "ascommodityspaced": true,
+                "asdecimalmark": ".",
+                "asdigitgroups": null,
+                "asprecision": 2,
+                "asrounding": "HardRounding"
+              }
+            },
+            "tag": "TotalCost"
+          },
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 41957415,
+            "decimalPlaces": 2,
+            "floatingPoint": 419574.15
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:bank:checking",
+      "assets:bank:checking",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -39895,
+            "decimalPlaces": 2,
+            "floatingPoint": -398.95
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:bank:prepaid",
+      "assets:bank:prepaid",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -11189,
+            "decimalPlaces": 2,
+            "floatingPoint": -111.89
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:neo:chf",
+      "assets:neo:chf",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 362225,
+            "decimalPlaces": 2,
+            "floatingPoint": 3622.25
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:neo:eur",
+      "assets:neo:eur",
+      0,
+      [
+        {
+          "acommodity": "EUR",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 442052,
+            "decimalPlaces": 2,
+            "floatingPoint": 4420.52
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        },
+        {
+          "acommodity": "EUR",
+          "acost": {
+            "contents": {
+              "acommodity": "CHF",
+              "acost": null,
+              "acostbasis": null,
+              "aquantity": {
+                "decimalMantissa": -21519,
+                "decimalPlaces": 2,
+                "floatingPoint": -215.19
+              },
+              "astyle": {
+                "ascommodityside": "R",
+                "ascommodityspaced": true,
+                "asdecimalmark": ".",
+                "asdigitgroups": null,
+                "asprecision": 2,
+                "asrounding": "HardRounding"
+              }
+            },
+            "tag": "TotalCost"
+          },
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -24000,
+            "decimalPlaces": 2,
+            "floatingPoint": -240
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:receivables:eva",
+      "assets:receivables:eva",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 2115,
+            "decimalPlaces": 2,
+            "floatingPoint": 21.15
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:receivables:lucas",
+      "assets:receivables:lucas",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 3000,
+            "decimalPlaces": 2,
+            "floatingPoint": 30
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "assets:sam:neo:chf",
+      "assets:sam:neo:chf",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 87024,
+            "decimalPlaces": 2,
+            "floatingPoint": 870.24
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "liabilities:people:sam",
+      "liabilities:people:sam",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -48339,
+            "decimalPlaces": 2,
+            "floatingPoint": -483.39
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        },
+        {
+          "acommodity": "EUR",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -450000,
+            "decimalPlaces": 2,
+            "floatingPoint": -4500
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        },
+        {
+          "acommodity": "EUR",
+          "acost": {
+            "contents": {
+              "acommodity": "CHF",
+              "acost": null,
+              "acostbasis": null,
+              "aquantity": {
+                "decimalMantissa": 68339,
+                "decimalPlaces": 2,
+                "floatingPoint": 683.39
+              },
+              "astyle": {
+                "ascommodityside": "R",
+                "ascommodityspaced": true,
+                "asdecimalmark": ".",
+                "asdigitgroups": null,
+                "asprecision": 2,
+                "asrounding": "HardRounding"
+              }
+            },
+            "tag": "TotalCost"
+          },
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 74000,
+            "decimalPlaces": 2,
+            "floatingPoint": 740
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "liabilities:people:max",
+      "liabilities:people:max",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 4230,
+            "decimalPlaces": 2,
+            "floatingPoint": 42.3
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        },
+        {
+          "acommodity": "EUR",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 17948,
+            "decimalPlaces": 2,
+            "floatingPoint": 179.48
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "income:salary",
+      "income:salary",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -432950,
+            "decimalPlaces": 2,
+            "floatingPoint": -4329.5
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "income:gifts",
+      "income:gifts",
+      0,
+      [
+        {
+          "acommodity": "EUR",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": -10000,
+            "decimalPlaces": 2,
+            "floatingPoint": -100
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "expenses:travel",
+      "expenses:travel",
+      0,
+      [
+        {
+          "acommodity": "COP",
+          "acost": {
+            "contents": {
+              "acommodity": "CHF",
+              "acost": null,
+              "acostbasis": null,
+              "aquantity": {
+                "decimalMantissa": 381,
+                "decimalPlaces": 1,
+                "floatingPoint": 38.1
+              },
+              "astyle": {
+                "ascommodityside": "R",
+                "ascommodityspaced": true,
+                "asdecimalmark": ".",
+                "asdigitgroups": null,
+                "asprecision": 2,
+                "asrounding": "HardRounding"
+              }
+            },
+            "tag": "TotalCost"
+          },
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 18500000,
+            "decimalPlaces": 2,
+            "floatingPoint": 185000
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "expenses:fees:bank",
+      "expenses:fees:bank",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 95,
+            "decimalPlaces": 2,
+            "floatingPoint": 0.95
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "expenses:food:groceries",
+      "expenses:food:groceries",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 9750,
+            "decimalPlaces": 2,
+            "floatingPoint": 97.5
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ],
+    [
+      "expenses:food:restaurants",
+      "expenses:food:restaurants",
+      0,
+      [
+        {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 2115,
+            "decimalPlaces": 2,
+            "floatingPoint": 21.15
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ]
+  ],
+  [
+    {
+      "acommodity": "CHF",
+      "acost": null,
+      "acostbasis": null,
+      "aquantity": {
+        "decimalMantissa": -61819,
+        "decimalPlaces": 2,
+        "floatingPoint": -618.19
+      },
+      "astyle": {
+        "ascommodityside": "R",
+        "ascommodityspaced": true,
+        "asdecimalmark": ".",
+        "asdigitgroups": null,
+        "asprecision": 2,
+        "asrounding": "HardRounding"
+      }
+    },
+    {
+      "acommodity": "COP",
+      "acost": {
+        "contents": {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 14999,
+            "decimalPlaces": 2,
+            "floatingPoint": 149.99
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        },
+        "tag": "TotalCost"
+      },
+      "acostbasis": null,
+      "aquantity": {
+        "decimalMantissa": 60457415,
+        "decimalPlaces": 2,
+        "floatingPoint": 604574.15
+      },
+      "astyle": {
+        "ascommodityside": "R",
+        "ascommodityspaced": true,
+        "asdecimalmark": ".",
+        "asdigitgroups": null,
+        "asprecision": 2,
+        "asrounding": "HardRounding"
+      }
+    },
+    {
+      "acommodity": "EUR",
+      "acost": null,
+      "acostbasis": null,
+      "aquantity": {
+        "decimalMantissa": 0,
+        "decimalPlaces": 2,
+        "floatingPoint": 0
+      },
+      "astyle": {
+        "ascommodityside": "R",
+        "ascommodityspaced": true,
+        "asdecimalmark": ".",
+        "asdigitgroups": null,
+        "asprecision": 2,
+        "asrounding": "HardRounding"
+      }
+    },
+    {
+      "acommodity": "EUR",
+      "acost": {
+        "contents": {
+          "acommodity": "CHF",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 46820,
+            "decimalPlaces": 2,
+            "floatingPoint": 468.2
+          },
+          "astyle": {
+            "ascommodityside": "R",
+            "ascommodityspaced": true,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        },
+        "tag": "TotalCost"
+      },
+      "acostbasis": null,
+      "aquantity": {
+        "decimalMantissa": 50000,
+        "decimalPlaces": 2,
+        "floatingPoint": 500
+      },
+      "astyle": {
+        "ascommodityside": "R",
+        "ascommodityspaced": true,
+        "asdecimalmark": ".",
+        "asdigitgroups": null,
+        "asprecision": 2,
+        "asrounding": "HardRounding"
+      }
+    }
+  ]
+]
+
