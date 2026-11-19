@@ -37,29 +37,33 @@ const when = computed(() => {
         {{ when }} · {{ shortDate(item.date) }} · {{ item.every }}
       </div>
     </div>
-    <div class="flex w-full items-center gap-2 pl-12 sm:w-auto sm:pl-0">
+    <!-- the buttons go under the amount when both do not fit on one line (a large amount) -->
+    <div class="flex w-full min-w-0 flex-wrap items-center justify-end gap-2 pl-12 sm:w-auto sm:pl-0">
       <span
         v-if="amount"
-        class="flex-1 tabular md-title-medium whitespace-nowrap sm:flex-none sm:pr-2"
+        class="mr-auto min-w-0 break-all tabular md-title-medium sm:pr-2"
         :class="amount.qty.isPos() && !amount.qty.isZero() ? 'text-success' : ''"
       >
         {{ signedMoney(amount.qty, amount.commodity) }}
       </span>
-      <UButton
-        variant="soft"
-        color="neutral"
-        label="Skip"
-        :disabled="busy"
-        :aria-label="`Skip ${item.label} on ${item.date}`"
-        @click="$emit('skip')"
-      />
-      <UButton
-        label="Record"
-        icon="material-symbols:check-rounded"
-        :disabled="busy"
-        :aria-label="`Record ${item.label} on ${item.date}`"
-        @click="$emit('record')"
-      />
+      <div class="flex shrink-0 gap-2">
+        <UButton
+          variant="soft"
+          color="neutral"
+          label="Skip"
+          :disabled="busy"
+          :aria-label="`Skip ${item.label} on ${item.date}`"
+          @click="$emit('skip')"
+        />
+        <UButton
+          label="Record"
+          icon="material-symbols:check-rounded"
+          :ui="{ leadingIcon: 'max-sm:hidden' }"
+          :disabled="busy"
+          :aria-label="`Record ${item.label} on ${item.date}`"
+          @click="$emit('record')"
+        />
+      </div>
     </div>
   </div>
 </template>
