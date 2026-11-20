@@ -83,3 +83,23 @@ test('chart of accounts: add a category in a group, edit it (name, group, archiv
   await expect(expenses.getByRole('treeitem', { name: new RegExp(`Animals ${n}`) }).first()).toBeVisible()
   await page.screenshot({ path: info.outputPath('chart.png'), fullPage: true })
 })
+
+test('accounts: a pocket inside an existing bank', async ({ page }, info) => {
+  const n = `${info.project.name} ${Date.now() % 100000}`
+  const name = `Insurance ${n}`
+  const key = `assets:bank:insurance-${n.toLowerCase().replace(/ /g, '-')}`
+  await connect(page)
+  await page.goto('/accounts')
+  await page.getByRole('button', { name: 'Show the pockets of Bank' }).click()
+  await page.getByRole('button', { name: 'Add a pocket to Bank' }).click()
+  const dialog = page.getByRole('dialog', { name: 'New account' })
+  await expect(dialog.getByRole('combobox', { name: 'Bank' })).toContainText('Bank')
+  await dialog.getByRole('textbox', { name: 'Account name' }).fill(name)
+  await expect(dialog.getByText(`Shown as Bank ${name}`)).toBeVisible()
+  await dialog.getByRole('button', { name: 'Add', exact: true }).click()
+  await expect(page.getByText('Account added').first()).toBeVisible()
+
+  // a leaf under the bank, named after it, in the bank's currency
+  expect(read('accounts.journal')).toMatch(new RegExp(`^account ${key} {2,}; type: C, currency: CHF, label: Bank ${name}$`, 'm'))
+  await expect(page.locator('.md-item').filter({ hasText: `Bank ${name}` })).toBeVisible()
+})

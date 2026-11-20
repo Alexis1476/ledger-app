@@ -44,5 +44,6 @@ by copying the files from another ledger, or give the permission and set up agai
 
 ## 4. Later
 
-**More → Accounts**: add accounts (with a currency, a new one if needed, and today's balance).
+**More → Accounts**: add accounts (with a currency, a new one if needed, and today's balance),
+on their own or as a pocket inside one of your banks (unfold the bank → **Add a pocket**).
 **More → Chart of accounts**: the expense and revenue categories (add, rename, move, archive). Everything else (expenses, transfers, scheduled payments, loans…) works the same.
