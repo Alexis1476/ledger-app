@@ -53,7 +53,9 @@ export const AppConfigSchema = z.looseObject({
   accounts: z.record(z.string(), AccountStyleSchema).default({}),
   categories: z.record(z.string(), CategoryStyleSchema).default({}),
   templates: z.array(TemplateSchema).default([]),
-  favorites: z.looseObject({ categories: z.array(z.string()).default([]) }).default({ categories: [] })
+  favorites: z.looseObject({ categories: z.array(z.string()).default([]) }).default({ categories: [] }),
+  /** monthly limit per expense category or group, in the reference currency ("200.00") */
+  budgets: z.record(z.string(), z.string().regex(/^\d+(\.\d+)?$/)).default({})
 })
 
 export type AppConfig = z.infer<typeof AppConfigSchema>
