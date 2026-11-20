@@ -21,6 +21,7 @@ export const NAV_GROUPS: NavGroup[] = [
     items: [
       { key: 'home', label: 'Home', description: 'Balances and this month', icon: 'material-symbols:home-outline-rounded', to: '/' },
       { key: 'transactions', label: 'Transactions', description: 'Every entry, with filters', icon: 'material-symbols:format-list-bulleted-rounded', to: '/transactions' },
+      { key: 'budgets', label: 'Budgets', description: 'A monthly limit per category', icon: 'material-symbols:savings-outline-rounded', to: '/budgets' },
       { key: 'insights', label: 'Insights', description: 'Charts you can arrange and filter', icon: 'material-symbols:monitoring', to: '/insights' },
       { key: 'shopping', label: 'Shopping list', description: 'What to buy', icon: 'material-symbols:shopping-cart-outline-rounded', to: '/shopping' },
       { key: 'scheduled', label: 'Scheduled', description: 'Planned payments, what is due', icon: 'material-symbols:event-repeat-outline-rounded', to: '/scheduled' }
@@ -60,6 +61,7 @@ export const NAV_GROUPS: NavGroup[] = [
 const COLORS: Record<string, { text: string; tile: string }> = {
   home: { text: 'text-(--nav-home)', tile: 'bg-(--nav-home)/12' },
   transactions: { text: 'text-(--nav-transactions)', tile: 'bg-(--nav-transactions)/12' },
+  budgets: { text: 'text-(--nav-budgets)', tile: 'bg-(--nav-budgets)/12' },
   insights: { text: 'text-(--nav-insights)', tile: 'bg-(--nav-insights)/12' },
   shopping: { text: 'text-(--nav-shopping)', tile: 'bg-(--nav-shopping)/12' },
   scheduled: { text: 'text-(--nav-scheduled)', tile: 'bg-(--nav-scheduled)/12' },
