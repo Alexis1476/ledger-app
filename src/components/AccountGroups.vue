@@ -17,8 +17,12 @@ export interface AccountGroup {
   key: string
   label: string
   accounts: AccountView[]
+  /** money kept for a person (no pockets can be added there) */
+  kept?: boolean
 }
-const props = defineProps<{ groups: AccountGroup[]; collapsed?: boolean }>()
+/** `addable`: an "Add a pocket" row at the end of an unfolded bank */
+const props = defineProps<{ groups: AccountGroup[]; collapsed?: boolean; addable?: boolean }>()
+defineEmits<{ add: [bank: string] }>()
 
 const L = useLedger()
 /** what the user folded or unfolded; otherwise `collapsed` decides */
@@ -96,6 +100,16 @@ const to = (account: string) => `/accounts/${encodeURIComponent(account)}`
           />
           <span class="tap w-10 shrink-0" aria-hidden="true" />
         </div>
+        <button
+          v-if="addable && !g.kept"
+          type="button"
+          class="md-item press flex w-full items-center gap-3 py-2 pl-16! text-primary md-label-large cursor-pointer"
+          :aria-label="`Add a pocket to ${g.label}`"
+          @click="$emit('add', g.key)"
+        >
+          <UIcon name="material-symbols:add-rounded" class="size-5" aria-hidden="true" />
+          Add a pocket
+        </button>
       </div>
     </div>
   </template>
