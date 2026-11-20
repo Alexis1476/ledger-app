@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent, ref } from 'vue'
+import { computed, defineAsyncComponent, reactive, ref } from 'vue'
+import { ulid } from 'ulid'
+import { useToast } from '@nuxt/ui/composables'
 import { useRoute } from 'vue-router'
 import AccountIcon from '@/components/AccountIcon.vue'
 import StatusBanner from '@/components/StatusBanner.vue'
@@ -10,7 +12,7 @@ import { lastMonths, monthEnd, valueAt, type NetWorthPoint } from '@/ledger/anal
 import { Decimal, ZERO } from '@/ledger/decimal'
 import { register, valueIn } from '@/ledger/reports'
 import type { Transaction } from '@/ledger/types'
-import { money, monthLabel, today } from '@/lib/format'
+import { money, monthLabel, parseUserAmount, shortDate, signedMoney, today } from '@/lib/format'
 import { useJournalStore } from '@/stores/journal'
 
 // charts load on demand: ECharts stays out of the first bundle
@@ -83,6 +85,48 @@ const grouped = computed(() => {
   return out
 })
 
+// ── Correct the balance: what the bank shows, the difference as an adjustment ──
+const toast = useToast()
+const ADJUST = 'equity:adjustments'
+const fix = reactive({ open: false, amount: '', date: today() })
+/** the balance of this account at the end of a day */
+const balanceAt = (date: string) => rows.value.find((r) => r.tx.date <= date)?.balance.get(currency.value) ?? ZERO
+const fixTarget = computed(() => parseUserAmount(fix.amount.replace(/^-/, '')))
+const fixNegative = computed(() => fix.amount.trim().startsWith('-'))
+const fixDelta = computed(() => (fixTarget.value ? (fixNegative.value ? fixTarget.value.neg() : fixTarget.value).minus(balanceAt(fix.date)) : undefined))
+const fixBusy = ref(false)
+function openFix() {
+  Object.assign(fix, { open: true, amount: '', date: today() })
+}
+async function saveFix() {
+  const delta = fixDelta.value
+  if (!delta || delta.isZero()) return
+  fixBusy.value = true
+  try {
+    if (!L.declared.value.includes(ADJUST)) await store.addAccount(ADJUST, { type: 'E', label: 'Adjustments' })
+    const id = ulid()
+    const tx: Transaction = {
+      date: fix.date,
+      status: '*',
+      payee: 'Balance correction',
+      note: st.value.label,
+      id,
+      tags: { via: 'app', id },
+      postings: [
+        { account: name.value, amount: { qty: delta, commodity: currency.value }, tags: {} },
+        { account: ADJUST, amount: { qty: delta.neg(), commodity: currency.value }, tags: {} }
+      ]
+    }
+    await store.addTransaction(tx, { queueOffline: false })
+    toast.add({ title: 'Balance corrected', description: `${st.value.label} · ${signedMoney(delta, currency.value)}`, icon: 'material-symbols:check-rounded', color: 'success' })
+    fix.open = false
+  } catch (e) {
+    toast.add({ title: 'Not saved', description: (e as Error).message, color: 'error', icon: 'material-symbols:cancel-outline-rounded' })
+  } finally {
+    fixBusy.value = false
+  }
+}
+
 const selected = ref<Transaction>()
 const detailOpen = ref(false)
 function select(tx: Transaction) {
@@ -123,6 +167,9 @@ function select(tx: Transaction) {
             </div>
           </div>
           <NetWorthChart v-if="rows.length" :points="points" :currency="currency" name="Balance" class="mt-3" />
+          <div v-if="!isGroup && view" class="mt-3 flex justify-end">
+            <UButton variant="soft" color="neutral" icon="material-symbols:edit-outline-rounded" label="Correct balance" aria-haspopup="dialog" @click="openFix" />
+          </div>
         </UCard>
 
         <!-- a bank: its pockets, each with its own details -->
@@ -172,6 +219,36 @@ function select(tx: Transaction) {
         </div>
       </div>
       <TxDetail v-model:open="detailOpen" :tx="selected" />
+
+      <!-- Correct the balance -->
+      <UModal v-model:open="fix.open" title="Correct the balance" description="Enter what your bank shows. The difference is recorded as an adjustment, nothing else changes.">
+        <template #body>
+          <form class="space-y-4" @submit.prevent="saveFix">
+            <UFormField label="Balance on the bank">
+              <UInput v-model="fix.amount" size="xl" inputmode="decimal" placeholder="0.00" aria-label="Balance on the bank" class="w-full" autofocus>
+                <template #trailing><span class="text-muted">{{ currency }}</span></template>
+              </UInput>
+            </UFormField>
+            <UFormField label="On">
+              <UInput v-model="fix.date" type="date" size="xl" aria-label="Date" class="w-full" />
+            </UFormField>
+            <div class="rounded-(--md-sys-shape-corner-large) bg-(--md-sys-color-surface-container) p-4 md-body-medium space-y-1">
+              <div class="flex justify-between gap-2">
+                <span class="text-muted">In the app on {{ shortDate(fix.date) }}</span><span class="tabular">{{ money(balanceAt(fix.date), currency) }}</span>
+              </div>
+              <div class="flex justify-between gap-2">
+                <span class="text-muted">Difference</span>
+                <span class="tabular md-label-large">{{ fixDelta ? signedMoney(fixDelta, currency) : '—' }}</span>
+              </div>
+            </div>
+            <p v-if="fixDelta && fixDelta.isZero()" class="text-xs text-muted">Nothing to correct: the app already shows this balance.</p>
+            <div class="flex justify-end gap-2 pt-2">
+              <UButton variant="ghost" label="Cancel" @click="fix.open = false" />
+              <UButton type="submit" label="Correct" icon="material-symbols:check-rounded" :loading="fixBusy" :disabled="!fixDelta || fixDelta.isZero()" />
+            </div>
+          </form>
+        </template>
+      </UModal>
     </template>
   </UDashboardPanel>
 </template>
