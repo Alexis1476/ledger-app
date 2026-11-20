@@ -20,7 +20,7 @@ maps to plain hledger, so nothing depends on the app.
 | People: I owe (liability) / owes me (asset), money kept in their pockets | `liabilities:people:*`, `assets:receivables:*` | People screen | 1 |
 | Templates | `app.config.json` | One-tap entry | 2 |
 | Planned payments | Periodic transactions `~` in `planned.journal` | "Upcoming" list, "Confirm" creates the real transaction | 3 |
-| Budgets | Periodic + `hledger bal --budget` | Progress bars per category per month | 3 |
+| Budgets | `budgets` in `app.config.json` (monthly limit per category or group) | Budgets page (month, progress, on track / spending fast / over), card on Home | done |
 | Savings goals | Dedicated account + target in config | Progress gauge | 3 |
 | Attachments | File in `attachments/` + tag `attachment:` | Receipt photo from the camera | 3 |
 | Export | `hledger print`, CSV | Export CSV button | 3 |

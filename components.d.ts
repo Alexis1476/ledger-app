@@ -15,6 +15,7 @@ declare module 'vue' {
     AccountIcon: typeof import('./src/components/AccountIcon.vue')['default']
     BalanceSheet: typeof import('./src/components/BalanceSheet.vue')['default']
     BottomNav: typeof import('./src/components/BottomNav.vue')['default']
+    BudgetBar: typeof import('./src/components/BudgetBar.vue')['default']
     CashFlowChart: typeof import('./src/components/charts/CashFlowChart.vue')['default']
     CategoryBars: typeof import('./src/components/CategoryBars.vue')['default']
     ChartTypeToggle: typeof import('./src/components/ChartTypeToggle.vue')['default']

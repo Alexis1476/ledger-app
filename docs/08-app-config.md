@@ -29,7 +29,8 @@ journal. Validated with a Zod schema at load; unknown keys are kept as-is on sav
   "templates": [
     { "name": "Rent", "kind": "expense", "account": "assets:bank:checking", "category": "expenses:housing:rent", "payee": "Landlord", "amount": "1200.00", "currency": "CHF" }
   ],
-  "favorites": { "categories": ["expenses:food:groceries", "expenses:dining:restaurants", "expenses:transport:public"] }
+  "favorites": { "categories": ["expenses:food:groceries", "expenses:dining:restaurants", "expenses:transport:public"] },
+  "budgets": { "expenses:dining": "200.00", "expenses:food:groceries": "450.00" }
 }
 ```
 
@@ -42,6 +43,9 @@ Rules:
   Accounts by convention: categories ending in `:<key>`, `assets:receivables:<key>` (they owe
   you), `liabilities:people:<key>` (a real debt).
 - Template `kind`: `expense` | `income` | `transfer`.
+- `budgets`: a monthly limit per expense category or group (a group counts all its categories),
+  in the reference currency. Compared with my own spending (not the money kept for people);
+  "Spending fast" when the share spent is more than 10 points ahead of the share of the month gone by.
 - Icons: Iconify names. Older `i-lucide-*` names are shown as their Material Symbols equivalent.
 
 ## Naming rules
