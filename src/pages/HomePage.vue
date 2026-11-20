@@ -15,6 +15,8 @@ import DueRow from '@/components/DueRow.vue'
 import { useDashboard } from '@/composables/useDashboard'
 import { useSchedules, type DueItem } from '@/composables/useSchedules'
 import { useScope } from '@/composables/useScope'
+import { useBudgets } from '@/composables/useBudgets'
+import BudgetBar from '@/components/BudgetBar.vue'
 import { useCountUp } from '@/composables/useCountUp'
 import { useLedger, type AccountView } from '@/composables/useLedger'
 import type { Decimal } from '@/ledger/decimal'
@@ -42,6 +44,8 @@ async function skipDue(d: DueItem) {
 }
 const scope = useScope()
 const hasKept = computed(() => L.keptPockets.value.all.size > 0)
+const B = useBudgets()
+const budget = computed(() => B.status(B.thisMonth.value))
 /** a new ledger: nothing recorded yet besides the opening balances */
 const fresh = computed(() => store.journal.transactions.every((t) => t.payee === 'Opening balance'))
 /** a chart that would only draw a flat line says nothing */
@@ -211,6 +215,25 @@ const hasFlows = computed(() => D.flow.value.some((r) => !r.income.isZero() || !
               </div>
             </template>
             <BalanceSheet />
+          </UCard>
+
+          <!-- Budgets: the closest to their limit -->
+          <UCard v-if="budget.lines.length" :ui="{ body: 'md-list' }">
+            <template #header>
+              <div class="flex items-center justify-between gap-2">
+                <h2 class="text-sm font-semibold">Budgets</h2>
+                <UButton to="/budgets" size="sm" class="tap" variant="link" label="All budgets" trailing-icon="material-symbols:chevron-right-rounded" />
+              </div>
+            </template>
+            <RouterLink v-for="l in budget.lines.slice(0, 3)" :key="l.key" to="/budgets" class="md-item press block py-3">
+              <div class="flex items-baseline justify-between gap-2">
+                <span class="truncate md-body-large">{{ B.label(l.key) }}</span>
+                <span class="tabular md-label-large whitespace-nowrap" :class="l.state === 'over' ? 'text-error' : ''">
+                  {{ l.left.isNeg() ? `${money(l.left.abs(), refC)} over` : `${money(l.left, refC)} left` }}
+                </span>
+              </div>
+              <BudgetBar class="mt-2" :ratio="l.ratio" :state="l.state" :elapsed="budget.elapsed" :label="B.label(l.key)" />
+            </RouterLink>
           </UCard>
 
           <!-- This month at a glance -->
